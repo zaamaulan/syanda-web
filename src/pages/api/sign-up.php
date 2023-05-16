@@ -7,11 +7,10 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
 
    $errorEmail = $errorUsername = '';
 
-   if (isset($_POST['email']) && isset($_POST['password']) && isset($_POST['username']) && isset($_POST['no_whatsapp'])) {
+   if (isset($_POST['email']) && isset($_POST['password']) && isset($_POST['username'])) {
       $email = $_POST['email'];
       $password = md5($_POST['password']);
       $username = $_POST['username'];
-      $whatsappNum = $_POST['no_whatsapp'];
    } else {
       $errorname;
       $errorUsername;
@@ -24,9 +23,9 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
       $errorEmail = 'Email sudah terdaftar';
       $errorUsername = 'Username sudah ada';
    } else {
-      $insert = "INSERT INTO users (username, email, password, no_whatsapp) VALUES ('$username', '$email', '$password', '$whatsappNum')";
+      $insert = "INSERT INTO users (username, email, password) VALUES ('$username', '$email', '$password')";
       mysqli_query($conn, $insert);
-      header('location: ../auth/');
+      header('location: ../auth/sign-in.php');
    }
    $conn->close();
 }

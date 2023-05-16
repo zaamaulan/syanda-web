@@ -20,7 +20,7 @@
 
 <body class="bg-stone-50 font-inter">
   <div class="flex justify-center items-center h-screen ">
-    <form action="sign-up-scnd.php" method="post" class="flex flex-col bg-white px-24 py-14 rounded-md">
+    <form action="../api/sign-up.php" method="post" class="flex flex-col bg-white px-24 py-14 rounded-md">
       <h1 class="text-4xl text-center mb-10 font-semibold">Sign Up</h1>
       <div class="mb-6 text-md w-full mx-auto">
         <label for="username">Username</label>
@@ -31,8 +31,8 @@
         <input type="email" name="email" id="" class="border-2 border-gray-200 focus:outline-2 focus:outline-indigo-500 px-3 py-1.5 rounded-lg w-full" require>
       </div>
       <div class="mb-3 text-md w-full mx-auto">
-        <label for="no_whatsapp">Nomor WhatsApp</label>
-        <input type="number" name="no_whatsapp" id="" class="border-2 border-gray-200 focus:outline-2 focus:outline-indigo-500 px-3 py-1.5 rounded-lg w-full" require>
+        <label for="password">Password</label>
+        <input type="password" name="password" id="" class="border-2 border-gray-200 focus:outline-2 focus:outline-indigo-500 px-3 py-1.5 rounded-lg w-full" require>
       </div>
       <h1 class="text-sm text-right mb-10">Sudah Punya Akun? <a href="sign-in.php" class="text-indigo-600 ">Sign In</a></h1>
       <input type="submit" value="Sign Up" class="px-6 py-2.5 bg-indigo-500 text-white font-semibold hover:bg-indigo-600 transition rounded-lg w-full mx-auto">

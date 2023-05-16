@@ -24,9 +24,9 @@ if (!isset($_SESSION['login'])) {
       <h1 class="ml-4 text-xl">Animers Majalengka</h1>
     </div>
     <div class="flex gap-x-20 items-center">
-      <h1 class="hover:text-indigo-500 transition text-indigo-500 hover:scale-[1.10]">Home</h1>
-      <h1 class="hover:text-indigo-500 transition  hover:scale-[1.10]"><a href="#">Comunity Activity</a></h1>
-      <h1 class="hover:text-indigo-500 transition hover:scale-[1.10]"><a href="event/">Event</a></h1>
+      <h1 class="hover:text-indigo-500 transition text-indigo-500 hover:scale-[1.05]"><a href="">Home</a> </h1>
+      <h1 class="hover:text-emerald-500 transition  hover:scale-[1.05]"><a href="activity/">Comunity Activity</a></h1>
+      <h1 class="hover:text-violet-500 transition hover:scale-[1.05] group"><a href="event/">Event <span class="absolute opacity-0 group-hover:opacity-100 transition">🎉</span></a></h1>
       <a href="auth/sign-in.php" class="<?= $beforeLogin ?>">
         <button class="bg-indigo-500 text-white px-8 py-3 rounded-full hover:bg-white hover:text-indigo-500 hover:border-2 hover:border-indigo-500 transition border-2 border-indigo-500">Join Us</button></a>
       <a href="api/sign-out.php" class="<?= $afterLogin ?> hover:text-red-500 transition duration-300 ">
@@ -36,7 +36,7 @@ if (!isset($_SESSION['login'])) {
   </nav>
   <section class="mx-52">
     <div class="flex items-center my-40 justify-between">
-      <div class="font-light text-8xl">
+      <div class="font-extralight text-8xl">
         <h1>Welcome
           <br>to
         </h1>
@@ -44,10 +44,10 @@ if (!isset($_SESSION['login'])) {
 
       </div>
       <div class="<?= $beforeLogin ?>">
-        <img src="../../public/images/wibu.png" alt="" class="rounded-3xl hover:scale-[1.05] w-[650px] transition duration-[500ms] shadow-2xl shadow-stone-300">
+        <img src="../../public/images/wibu.png" alt="" class="rounded-xl hover:scale-[1.05] w-[650px] transition duration-[500ms] shadow-2xl shadow-stone-300">
       </div>
       <div class="<?= $afterLogin ?>">
-        <img src="../../public/images/wibu-2.png" alt="" class="rounded-3xl hover:scale-[1.05] w-[650px] transition duration-[500ms] shadow-2xl shadow-stone-300">
+        <img src="../../public/images/wibu-2.png" alt="" class="rounded-xl hover:scale-[1.05] w-[650px] transition duration-[500ms] shadow-2xl shadow-stone-300">
       </div>
     </div>
     <section class="my-80">
@@ -68,28 +68,47 @@ if (!isset($_SESSION['login'])) {
     </section>
 
     <div class="mt-80  ">
-      <div class="text-center w-[800px] mx-auto <?= $beforeLogin ?>">
-        <h1 class="text-4xl  font-light mb-2">Ayo Bergabung dengan Kami!</h1>
-        <h1 class="text-lg text-gray-600 ">
-          Mari bergabung dengan komunitas cosplayer di Animers Majalengka! Bergabunglah sekarang untuk memperluas jaringan dan pengalaman cosplay Kamu!</h1>
+      <div class="<?= $beforeLogin ?>">
+        <div class="text-center w-[800px] mx-auto">
+          <h1 class="text-4xl  font-light mb-2">Ayo Bergabung dengan Kami!</h1>
+          <h1 class="text-lg text-gray-600 ">
+            Mari bergabung dengan komunitas cosplayer di Animers Majalengka! Bergabunglah sekarang untuk memperluas jaringan dan pengalaman cosplay Kamu!</h1>
+        </div>
+
+        <div class="flex justify-center mt-10">
+          <a href="auth/sign-in.php">
+            <button class="bg-indigo-500 text-white px-14 py-3 rounded-full hover:bg-white hover:text-indigo-500 hover:border-2 hover:border-indigo-500 transition border-2 border-indigo-500 ">Join Us</button></a>
+        </div>
       </div>
 
-      <div class="flex justify-center mt-10  <?= $beforeLogin ?>">
-        <a href="auth/sign-in.php">
-          <button class="bg-indigo-500 text-white px-14 py-3 rounded-full hover:bg-white hover:text-indigo-500 hover:border-2 hover:border-indigo-500 transition border-2 border-indigo-500 ">Join Us</button></a>
-      </div>
+      <div class="<?= $afterLogin ?> h-[60vh]">
+        <div class="text-center w-[850px] mx-auto group">
+          <div class="text-5xl mb-4 ">🏹</div>
+          <h1 class="text-7xl font-light mb-2">
+            Community Activity</h1>
+          <h1 class="text-lg text-emerald-500">
+            Kamu bisa melihat apa saja yang orang lain sudah lakukan dalam beberapa hari kemarin loh!</h1>
+        </div>
 
-      <div class="text-center w-[850px] mx-auto  <?= $afterLogin ?> ">
-        <div class="text-5xl mb-4">🎉</div>
-        <h1 class="text-7xl font-light mb-2">
-          Events!</h1>
-        <h1 class="text-lg text-violet-500 ">
-          Sepertinya kamu harus melhat beberapa Event yang kami selenggarakan beberapa hari ke depan.</h1>
+        <div class="flex justify-center mt-10">
+          <a href="event/">
+            <button class="hover:bg-emerald-500 hover:text-white px-14 py-3 rounded-full bg-white text-emerald-500 hover:border-2 hover:border-emerald-500 transition border-2 border-emerald-500 ">Pergi ke Community Activity</button></a>
+        </div>
       </div>
+      <div class="bg-stone-50 absolute h-[60vh]"></div>
+      <div class="<?= $afterLogin ?> h-[60vh] ">
+        <div class="text-center w-[850px] mx-auto">
+          <div class="text-5xl mb-4">🎉</div>
+          <h1 class="text-7xl font-light mb-2">
+            Events!</h1>
+          <h1 class="text-lg text-violet-500 ">
+            Sepertinya kamu harus melihat beberapa Event yang kami selenggarakan beberapa hari ke depan. Kamu bisa mengikutinya dan bergabung dengan orang lain.</h1>
+        </div>
 
-      <div class="flex justify-center mt-10  <?= $afterLogin ?>">
-        <a href="event/">
-          <button class="hover:bg-violet-500 hover:text-white px-14 py-3 rounded-full bg-white text-violet-500 hover:border-2 hover:border-violet-500 transition border-2 border-violet-500 ">Pergi ke Event</button></a>
+        <div class="flex justify-center mt-10">
+          <a href="event/">
+            <button class="hover:bg-violet-500 hover:text-white px-14 py-3 rounded-full bg-white text-violet-500 hover:border-2 hover:border-violet-500 transition border-2 border-violet-500 ">Pergi ke Event</button></a>
+        </div>
       </div>
     </div>
   </section>
@@ -105,11 +124,9 @@ if (!isset($_SESSION['login'])) {
         <img src="../../public/icons/instagram-48.svg" alt="">
       </a>
     </div>
-    <div class="bg-indigo-500 py-2.5"></div>
-  </footer>
-  <script>
+      <div class="bg-gradient-to-r from-indigo-500 via-emerald-500 to-violet-500 py-2.5"></div>
 
-  </script>
+  </footer>
 </body>
 
 </html>

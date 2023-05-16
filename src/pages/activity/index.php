@@ -24,9 +24,9 @@ if (!isset($_SESSION['login'])) {
       <h1 class="ml-4 text-xl">Animers Majalengka</h1>
     </div>
     <div class="flex gap-x-20 items-center">
-      <h1 class="hover:text-indigo-500 transition hover:scale-[1.05]"><a href="../">Home</a> </h1>
-      <h1 class="hover:text-emerald-500 transition  hover:scale-[1.05]"><a href="../activity/">Comunity Activity</a></h1>
-      <h1 class="hover:text-violet-500 transition hover:scale-[1.05] group text-violet-500"><a href="">Event <span class="absolute opacity-0 group-hover:opacity-100 transition">🎉</span></a></h1>
+      <h1 class="hover:text-indigo-500 transition  hover:scale-[1.05]"><a href="../">Home</a> </h1>
+      <h1 class="hover:text-emerald-500 transition  hover:scale-[1.05] text-emerald-500"><a href="">Comunity Activity</a></h1>
+      <h1 class="hover:text-violet-500 transition hover:scale-[1.05] group"><a href="../event/">Event <span class="absolute opacity-0 group-hover:opacity-100 transition">🎉</span></a></h1>
       <a href="../auth/sign-in.php" class="<?= $beforeLogin ?>">
         <button class="bg-indigo-500 text-white px-8 py-3 rounded-full hover:bg-white hover:text-indigo-500 hover:border-2 hover:border-indigo-500 transition border-2 border-indigo-500">Join Us</button></a>
       <a href="../api/sign-out.php" class="<?= $afterLogin ?> hover:text-red-500 transition duration-300 ">

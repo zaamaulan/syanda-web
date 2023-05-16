@@ -19,11 +19,18 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
 
   if ($result->num_rows > 0) {
     while ($row = mysqli_fetch_assoc($result)) {
+      session_start();
       $_SESSION['username'] = $row['username'];
       $_SESSION['email'] = $email;
       $_SESSION['login'] = true;
 
-      header('location: ../');
+      if ($row['role'] == 'admin') {
+        header('location: ../admin/');
+        exit();
+      } else {
+        header('location: ../');
+        exit();
+      }
     }
   } else {
     $error =  "Invalid email or password";
