@@ -40,7 +40,7 @@ $row = mysqli_fetch_assoc($result);
       <a href="../auth/sign-in.php" class="<?= $beforeLogin ?>">
         <button class="bg-indigo-500 text-white px-8 py-3 rounded-full hover:bg-white hover:text-indigo-500 hover:border-2 hover:border-indigo-500 transition border-2 border-indigo-500 scale-[0.85] lg:scale-100">Join Us</button></a>
       <a href="../api/sign-out.php" class="<?= $afterLogin ?> hover:text-red-500 transition duration-300 ">
-        <button>Sign Out</button>
+        <button onclick="return confirm('Kamu yakin ingin Sign-Out?')">Sign Out</button>
       </a>
     </div>
   </nav>
@@ -56,7 +56,7 @@ $row = mysqli_fetch_assoc($result);
           <label for="email" class="pl-3 text-sm lg:text-lg">Email</label>
           <input type="text" name="email" value="<?= $row['email'] ?>" id="" class="focus:outline-2 focus:outline-indigo-500 px-3 py-1.5 rounded-lg w-full text-sm lg:text-lg">
         </div>
-        <input type="submit" id="update" style="display: none;" class="px-6 py-2.5 bg-indigo-500 text-white font-semibold hover:bg-indigo-600 transition rounded-lg w-full mx-auto">
+        <input type="submit" id="update" style="display: none;" class="px-6 py-2.5 bg-indigo-500 text-white font-semibold hover:bg-indigo-600 transition rounded-lg w-full mx-auto scale-1 text-sm lg:text-base">
       </form>
     </div>
   </section>

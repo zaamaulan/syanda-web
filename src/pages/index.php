@@ -32,7 +32,7 @@ if (!isset($_SESSION['login'])) {
       <a href="auth/sign-in.php" class="<?= $beforeLogin ?>">
         <button class="bg-indigo-500 text-white px-8 py-3 rounded-full hover:bg-white hover:text-indigo-500 hover:border-2 hover:border-indigo-500 transition border-2 border-indigo-500 hidden md:block scale-[0.85] lg:scale-100">Join Us</button></a>
       <a href="api/sign-out.php" class="<?= $afterLogin ?> hover:text-red-500 transition duration-300 ">
-        <button>Sign Out</button>
+        <button onclick="return confirm('Kamu yakin ingin Sign-Out?')">Sign Out</button>
       </a>
     </div>
   </nav>
