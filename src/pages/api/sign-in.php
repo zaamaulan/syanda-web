@@ -20,6 +20,7 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
   if ($result->num_rows > 0) {
     while ($row = mysqli_fetch_assoc($result)) {
       session_start();
+      $_SESSION['id'] = $row['id'];
       $_SESSION['username'] = $row['username'];
       $_SESSION['email'] = $email;
       $_SESSION['login'] = true;

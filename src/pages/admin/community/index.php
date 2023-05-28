@@ -18,22 +18,23 @@ if (!isset($_SESSION['login'])) {
 </head>
 
 <body class="font-inter">
-  <nav class="flex justify-between px-32 py-5 items-center sticky top-0 bg-white backdrop-filter backdrop-blur-lg bg-opacity-70 z-50">
-    <div class="flex items-center text-xl"><img src="../../../../public/icons/logo.png" alt="" width="46px">
-      <h1 class="ml-4 text-xl">Animers Majalengka</h1>
+  <nav class="flex flex-col lg:flex-row justify-between px-8  lg:px-32 py-5 items-center sticky top-0 bg-white backdrop-filter backdrop-blur-lg bg-opacity-70 z-50 gap-y-8">
+    <div class="items-center text-xl hidden md:flex ">
+      <img src="../../../../public/icons/logo.png" alt="" width="46px">
+      <p class="ml-4 text-xl">Animers Majalengka</p>
     </div>
-    <div class="flex gap-x-20 items-center">
-      <h1 class="hover:text-indigo-500 transition  hover:scale-[1.05]"><a href="../">Dashboard</a></h1>
-      <h1 class="hover:text-emerald-500 transition text-emerald-500 hover:scale-[1.05]"><a href="">Control Community</a></h1>
-      <h1 class="hover:text-orange-500 transition  hover:scale-[1.05]"><a href="../data/">Info Data</a></h1>
-      <h1 class="hover:text-violet-500 transition hover:scale-[1.05] group"><a href="../manage event/">Manage Event</a></h1>
+    <div class="flex gap-8 lg:gap-x-20 items-center overflow-x-visible text-sm lg:text-base flex-wrap md:flex-nowrap gap-y-10 justify-center lg:justify-normal">
+      <p class="hover:text-indigo-500 transition hover:scale-[1.05] "><a href="../">Dashboard</a> </p>
+      <p class="hover:text-emerald-500 transition  hover:scale-[1.05] text-emerald-500"><a href="">Control Activity</a></p>
+      <p class="hover:text-orange-500 transition  hover:scale-[1.05]"><a href="../data/">Info Data</a></p>
+      <p class="hover:text-violet-500 transition hover:scale-[1.05] group "><a href="../manage event/">Manage Event <span class="absolute opacity-0 group-hover:opacity-100 transition">🎉</span></a></p>
       <a href="../../api/sign-out.php" class="<?= $afterLogin ?> hover:text-red-500 transition duration-300 ">
-        <button>Sign Out</button>
+        <button onclick="return confirm('Kamu yakin ingin Sign-Out?')">Sign Out</button>
       </a>
     </div>
   </nav>
   <section class="flex justify-center items-center h-[80vh]">
-    <h1 class="text-7xl font-extralight">Control Community Activity</h1>
+    <p class="text-2xl lg:text-7xl font-extralight">Control Community Activity</p>
   </section>
 </body>
 

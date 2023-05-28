@@ -2,6 +2,6 @@
 include 'connection.php';
 
 session_start();
-$_SESSION['Log In'] = false;
+$_SESSION['login'] = false;
 session_destroy();
 header('location: ../');

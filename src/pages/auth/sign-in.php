@@ -15,17 +15,17 @@ include '../api/sign-in.php';
 
 <body class="bg-stone-50 font-inter">
   <div class="flex justify-center items-center h-screen ">
-    <form action="" method="post" class="flex flex-col bg-white px-24 py-14 rounded-md ">
-      <h1 class="text-4xl text-center mb-10 font-semibold">Sign In</h1>
+    <form action="" method="post" class="flex flex-col bg-white px-14 lg:px-24 py-14 rounded-md scale-[0.85] lg:scale-100">
+      <p class="text-4xl text-center mb-10 font-semibold">Sign In</p>
       <div class="mb-6 text-md w-full mx-auto">
         <label for="email">Email</label>
-        <input type="email" name="email" id="" class="border-2 border-gray-200 focus:outline-2 focus:outline-indigo-500 px-3 py-1.5 rounded-lg w-full" require>
+        <input type="email" name="email" id="" class="border-2 border-gray-200 focus:outline-2 focus:outline-indigo-500 px-3 py-1.5 rounded-lg w-full" required>
       </div>
       <div class="mb-3 text-md w-full mx-auto">
         <label for="password">Password</label>
-        <input type="password" name="password" id="" class="border-2 border-gray-200 focus:outline-2 focus:outline-indigo-500 px-3 py-1.5 rounded-lg w-full" require>
+        <input type="password" name="password" id="" class="border-2 border-gray-200 focus:outline-2 focus:outline-indigo-500 px-3 py-1.5 rounded-lg w-full" required>
       </div>
-      <h1 class="text-sm text-right mb-10">Belum Punya Akun? <a href="sign-up.php" class="text-indigo-600 ">Sign Up</a></h1>
+      <p class="text-sm text-right mb-10">Belum Punya Akun? <a href="sign-up.php" class="text-indigo-600 ">Sign Up</a></p>
       <input type="submit" value="Sign In" class="px-6 py-2.5 bg-indigo-500 text-white font-semibold hover:bg-indigo-600 transition rounded-lg w-full mx-auto">
     </form>
   </div>
