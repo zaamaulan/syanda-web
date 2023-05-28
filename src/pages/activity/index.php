@@ -27,10 +27,10 @@ if (!isset($_SESSION['login'])) {
     <div class="flex gap-8 lg:gap-x-20 items-center overflow-x-visible text-sm lg:text-base flex-wrap md:flex-nowrap gap-y-10 justify-center lg:justify-normal">
       <p class="hover:text-indigo-500 transition hover:scale-[1.05]"><a href="../">Home</a> </p>
       <p class="hover:text-emerald-500 transition  hover:scale-[1.05] text-emerald-500 "><a href="">Comunity Activity</a></p>
-      <p class="hover:text-violet-500 transition hover:scale-[1.05] group"><a href="../event/">Event <span class="absolute opacity-0 group-hover:opacity-100 transition">🎉</span></a></p>
+      <p class="hover:text-violet-500 transition hover:scale-[1.05] group"><a href="../event/">Event <span class="absolute opacity-100 lg:opacity-0 group-hover:opacity-100 transition">🎉</span></a></p>
       <p class="hover:text-cyan-500 transition  hover:scale-[1.05] <?= $afterLogin ?>"><a href="../profile/">Profile</a></p>
       <a href="../auth/sign-in.php" class="<?= $beforeLogin ?>">
-        <button class="bg-indigo-500 text-white px-8 py-3 rounded-full hover:bg-white hover:text-indigo-500 hover:border-2 hover:border-indigo-500 transition border-2 border-indigo-500">Join Us</button></a>
+        <button class="bg-indigo-500 text-white px-8 py-3 rounded-full hover:bg-white hover:text-indigo-500 hover:border-2 hover:border-indigo-500 transition border-2 border-indigo-500 hidden md:block scale-[0.85] lg:scale-100">Join Us</button></a>
       <a href="../api/sign-out.php" class="<?= $afterLogin ?> hover:text-red-500 transition duration-300 ">
         <button>Sign Out</button>
       </a>
